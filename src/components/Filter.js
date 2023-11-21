@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Filter({ onCategoryChange, onSearchChange }) {
-  const [searchItem, setSearchItem] = useState("");
+  const [search, setSearchItem] = useState("testing");
 
   function handleSearchChange(event) {
     const newSearchItem = event.target.value;
@@ -14,7 +14,7 @@ function Filter({ onCategoryChange, onSearchChange }) {
         type="text"
         name="search"
         placeholder="Search..."
-        value={searchItem}
+        value={search}
         onChange={handleSearchChange}
       />
       <select name="filter" onChange={onCategoryChange}>

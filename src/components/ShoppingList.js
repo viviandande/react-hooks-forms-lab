@@ -22,7 +22,7 @@ function ShoppingList({ items, setItems }) {
   const itemsToDisplay = items.filter((item) => {
     const isCategoryMatch =
       selectedCategory === "All" || item.category === selectedCategory;
-    const isSearchMatch = item.name.toLowerCase().includes(searchItem.toLocaleLowerCase());
+    const isSearchMatch = item.name.toLowerCase().includes(searchItem.toLowerCase());
 
     return isCategoryMatch && isSearchMatch;
   });
